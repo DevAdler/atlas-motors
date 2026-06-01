@@ -6,6 +6,26 @@ const mainSite = document.querySelector(".main-site");
 
 const introVideo = document.querySelector(".intro-video");
 
+const hamburgerBtn = document.querySelector(".hamburger-btn");
+
+const closeMenu = document.querySelector(".close-menu");
+
+const mobileMenu = document.querySelector(".mobile-menu");
+
+const body = document.body;
+
+// FUNCTION TO OPEN MOBILE MENU
+
+function openMenu() {
+  mobileMenu.classList.add("active");
+  body.style.overflow = "hidden";
+}
+
+function closeMobileMenu() {
+  mobileMenu.classList.remove("active");
+  body.style.overflow = "auto";
+}
+
 // FUNCTION TO ENTER SITE
 
 function enterSite() {
@@ -48,14 +68,20 @@ function enterSite() {
 
 enterBtn.addEventListener("click", enterSite);
 
+// HAMBURGER MENU
+
+hamburgerBtn.addEventListener("click", openMenu);
+
+closeMenu.addEventListener("click", closeMobileMenu);
+
 // AUTO ENTER WHEN VIDEO ENDS
 
 introVideo.addEventListener("ended", enterSite);
 
 // FEATURED INVENTORY DATA
 
-const cars = [
-  {
+/*const cars = [
+ {
     brand: "Lamborghini Aventador",
     price: "$550,000",
     image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70",
@@ -100,4 +126,4 @@ cars.forEach((car) => {
   `;
 
   carContainer.appendChild(carCard);
-});
+});*/

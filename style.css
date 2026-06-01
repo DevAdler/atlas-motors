@@ -211,6 +211,80 @@ nav {
   color: #c9a227;
 }
 
+.mobile-menu {
+  display: none;
+
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.94);
+
+  backdrop-filter: blur(10px);
+
+  z-index: 9999;
+
+  overflow-y: auto;
+}
+
+.hamburger-btn {
+  display: none;
+
+  background: transparent;
+
+  border: none;
+
+  color: white;
+
+  font-size: 2rem;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.hamburger-btn:hover {
+  color: #c9a227;
+}
+
+.mobile-menu.active {
+  display: block;
+}
+
+.close-menu {
+  background: none;
+
+  border: none;
+
+  color: white;
+
+  font-size: 2rem;
+
+  cursor: pointer;
+
+  padding: 30px;
+}
+
+.menu-card {
+  display: block;
+
+  text-decoration: none;
+
+  color: white;
+
+  margin: 25px;
+
+  text-align: center;
+}
+
+.menu-card img {
+  width: 100%;
+
+  max-width: 320px;
+
+  border-radius: 16px;
+}
+
 /* HERO */
 
 .hero {
@@ -423,7 +497,7 @@ nav {
   height: 100%;
 
   transform: scale(1.35);
-  
+
   object-fit: cover;
 
   transform: scale(1.4);
@@ -475,12 +549,6 @@ nav {
   grid-template-columns: repeat(3, 1fr);
 
   gap: 2rem;
-}
-
-@media (max-width: 992px) {
-  .hyper-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* SUPERCAR SECTION */
@@ -581,7 +649,28 @@ nav {
 }
 
 @media (max-width: 992px) {
+  .hyper-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
   .super-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger-btn {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 3rem;
   }
 }

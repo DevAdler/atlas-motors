@@ -44,6 +44,7 @@
     <!-- MAIN SITE -->
 
     <div class="main-site">
+
       <!-- NAVBAR -->
 
       <nav>
@@ -53,14 +54,34 @@
 
         <div class="nav-links">
           <a href="#">Hypercars</a>
-
           <a href="#">Supercars</a>
-
           <a href="#">Certified</a>
-
           <a href="#">Contact</a>
         </div>
+
+        <button class="hamburger-btn" aria-label="Open Navigation Menu">
+          ☰
+        </button>
       </nav>
+
+      <div class="mobile-menu">
+        <button class="close-menu" aria-label="Close Navigation Menu">✕</button>
+
+        <a href="#hypercars" class="menu-card">
+          <h2>HYPERCARS</h2>
+
+          <img src="assets/atlas-nav-bugatti.png" alt="Bugatti Hypercars" />
+        </a>
+        <a href="#supercars" class="menu-card">
+          <h2>SUPERCARS</h2>
+          <img src="assets/atlas-nav-lambo.png" alt="Lamborghini Supercars" />
+        </a>
+
+        <a href="#contact" class="menu-card">
+          <h2>CONTACT</h2>
+          <img src="assets/atlas-nav-contact.png" alt="ATLAS Motors Contact" />
+        </a>
+      </div>
 
       <!-- HERO SECTION -->
 
@@ -79,10 +100,11 @@
 
       <!-- HYPERCAR COLLECTION -->
 
-      <section class="hypercars">
+      <section id="hypercars" class="hypercars">
         <h2 class="section-title">Hypercar <span>Collection</span></h2>
 
         <div class="hyper-grid">
+          
           <!-- BUGATTI -->
 
           <div class="hyper-card">
@@ -129,7 +151,7 @@
 
       <!-- SUPERCAR COLLECTION -->
 
-      <section class="supercars">
+      <section id="supercars" class="supercars">
         <h2 class="section-title">Supercar <span>Collection</span></h2>
 
         <div class="super-grid">
