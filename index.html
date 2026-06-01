@@ -1,0 +1,196 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ATLAS Motors | Exotic Cars</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Google Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- INTRO SCREEN -->
+
+    <section class="intro">
+      <video autoplay muted playsinline class="intro-video">
+        <source src="assets/atlas-intro-2.mp4" type="video/mp4" />
+      </video>
+
+      <div class="intro-overlay"></div>
+
+      <div class="intro-content">
+        <h1>ATLAS MOTORS</h1>
+
+        <p>Precision. Luxury. Power.</p>
+
+        <button id="enter-btn">ENTER EXPERIENCE</button>
+      </div>
+    </section>
+
+    <!-- MAIN SITE -->
+
+    <div class="main-site">
+      <!-- NAVBAR -->
+
+      <nav>
+        <div class="logo">
+          <img src="assets/atlas-logo.png" alt="ATLAS Motors Logo" />
+        </div>
+
+        <div class="nav-links">
+          <a href="#">Hypercars</a>
+
+          <a href="#">Supercars</a>
+
+          <a href="#">Certified</a>
+
+          <a href="#">Contact</a>
+        </div>
+      </nav>
+
+      <!-- HERO SECTION -->
+
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Drive The <span>Extraordinary</span></h1>
+
+          <p>
+            Explore the world's most exclusive exotic vehicles. From Lamborghini
+            to Bugatti, experience automotive perfection.
+          </p>
+
+          <button class="hero-btn">Explore Inventory</button>
+        </div>
+      </section>
+
+      <!-- HYPERCAR COLLECTION -->
+
+      <section class="hypercars">
+        <h2 class="section-title">Hypercar <span>Collection</span></h2>
+
+        <div class="hyper-grid">
+          <!-- BUGATTI -->
+
+          <div class="hyper-card">
+            <video muted loop playsinline preload="metadata" class="card-video">
+              <source src="assets/tourbillon-short-1.mp4" type="video/mp4" />
+            </video>
+
+            <div class="card-overlay">
+              <h3>Bugatti Tourbillon</h3>
+
+              <p>Timeless Elegance & Speed</p>
+            </div>
+          </div>
+
+          <!-- KOENIGSEGG -->
+
+          <div class="hyper-card">
+            <video muted loop playsinline preload="metadata" class="card-video">
+              <source src="assets/jesko-short.mp4" type="video/mp4" />
+            </video>
+
+            <div class="card-overlay">
+              <h3>Koenigsegg Jesko</h3>
+
+              <p>Engineering Without Limits</p>
+            </div>
+          </div>
+
+          <!-- FERRARI -->
+
+          <div class="hyper-card">
+            <video muted loop playsinline preload="metadata" class="card-video">
+              <source src="assets/la-ferrari-short.mp4" type="video/mp4" />
+            </video>
+
+            <div class="card-overlay">
+              <h3>Ferrari LaFerrari</h3>
+
+              <p>Hybrid Performance Masterpiece</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SUPERCAR COLLECTION -->
+
+      <section class="supercars">
+        <h2 class="section-title">Supercar <span>Collection</span></h2>
+
+        <div class="super-grid">
+          <!-- LAMBORGHINI -->
+
+          <a href="huracan.html" class="super-link">
+            <div class="super-card">
+              <img
+                src="assets/huracan-front.jpg"
+                alt="Lamborghini Huracan STO"
+              />
+
+              <div class="super-overlay">
+                <h3>Lamborghini Huracán STO</h3>
+
+                <p>Pure Naturally Aspirated Fury</p>
+              </div>
+            </div>
+          </a>
+
+          <!-- Audi -->
+
+          <a href="r8.html" class="super-link">
+            <div class="super-card">
+              <img src="assets/audi-front.jpg" alt="Audi R8 Spyder" />
+
+              <div class="super-overlay">
+                <h3>Audi R8 Spyder</h3>
+
+                <p>V10 power. Unmistakable presence.</p>
+              </div>
+            </div>
+          </a>
+
+          <!-- MCLAREN -->
+
+          <div class="super-card">
+            <img src="assets/mclaren-front.jpg" alt="McLaren 720S" />
+
+            <div class="super-overlay">
+              <h3>McLaren 720S</h3>
+
+              <p>Born from the racetrack.</p>
+            </div>
+          </div>
+
+          <!-- PORSCHE -->
+
+          <div class="super-card">
+            <img src="assets/gt3rs.jpg" alt="Porsche GT3 RS" />
+
+            <div class="super-overlay">
+              <h3>Porsche 911 GT3 RS</h3>
+
+              <p>Precision Engineered Performance</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
