@@ -211,20 +211,42 @@ nav {
   color: #c9a227;
 }
 
-.mobile-menu {
-  display: none;
+/* RESPONSIVE NAV LINK MENU */
 
+.mobile-menu {
   position: fixed;
 
   inset: 0;
 
-  background: rgba(0, 0, 0, 0.94);
+  background-image: url("assets/background-2.png");
 
   backdrop-filter: blur(10px);
 
   z-index: 9999;
 
   overflow-y: auto;
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+  opacity: 0;
+
+  visibility: visible;
+
+  pointer-events: none;
+
+  transition: opacity 0.4s ease;
+}
+
+.mobile-menu.active {
+  opacity: 1;
+
+  visibility: visible;
+
+  pointer-events: auto;
 }
 
 .hamburger-btn {
@@ -247,10 +269,6 @@ nav {
   color: #c9a227;
 }
 
-.mobile-menu.active {
-  display: block;
-}
-
 .close-menu {
   background: none;
 
@@ -263,6 +281,39 @@ nav {
   cursor: pointer;
 
   padding: 30px;
+}
+
+.close-menu,
+.menu-hypercars,
+.menu-supercars,
+.menu-contact {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.mobile-menu.active .close-menu,
+.mobile-menu.active .menu-hypercars,
+.mobile-menu.active .menu-supercars,
+.mobile-menu.active .menu-contact {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.close-menu {
+  transition-delay: 0s;
+}
+
+.menu-hypercars {
+  transition-delay: 0.1s;
+}
+
+.menu-supercars {
+  transition-delay: 0.2s;
+}
+
+.menu-contact {
+  transition-delay: 0.3s;
 }
 
 .menu-card {
