@@ -1,129 +1,76 @@
+// ELEMENT REFERENCES
+
 const enterBtn = document.getElementById("enter-btn");
-
 const intro = document.querySelector(".intro");
-
 const mainSite = document.querySelector(".main-site");
-
 const introVideo = document.querySelector(".intro-video");
 
 const hamburgerBtn = document.querySelector(".hamburger-btn");
-
-const closeMenu = document.querySelector(".close-menu");
-
+const closeMenuBtn = document.querySelector(".close-menu");
 const mobileMenu = document.querySelector(".mobile-menu");
 
 const body = document.body;
 
-// FUNCTION TO OPEN MOBILE MENU
+// PREVENTS enterSite() FROM RUNNING MULTIPLE TIMES
+
+let siteEntered = false;
+
+// MOBILE MENU
 
 function openMenu() {
   mobileMenu.classList.add("active");
   body.style.overflow = "hidden";
 }
 
-function closeMobileMenu() {
+function closeMenu() {
   mobileMenu.classList.remove("active");
   body.style.overflow = "auto";
 }
 
-// FUNCTION TO ENTER SITE
+// HYPERCAR VIDEO HOVER EFFECTS
 
-function enterSite() {
-  intro.style.display = "none";
+function initializeHypercarVideos() {
+  const cards = document.querySelectorAll(".hyper-card");
 
-  mainSite.style.display = "block";
+  cards.forEach((card) => {
+    const video = card.querySelector(".card-video");
 
-  // ALLOW DISPLAY TO APPLY
-
-  setTimeout(() => {
-    mainSite.style.opacity = "1";
-  }, 50);
-
-  setTimeout(() => {
-    intro.style.display = "none";
-
-    mainSite.style.display = "block";
-
-    // HYPERCAR VIDEO HOVER EFFECTS
-
-    const cards = document.querySelectorAll(".hyper-card");
-
-    cards.forEach((card) => {
-      const video = card.querySelector(".card-video");
-
-      card.addEventListener("mouseenter", () => {
-        video.play();
-      });
-
-      card.addEventListener("mouseleave", () => {
-        video.pause();
-
-        video.currentTime = 0;
-      });
+    card.addEventListener("mouseenter", () => {
+      video.play();
     });
-  }, 1500);
+
+    card.addEventListener("mouseleave", () => {
+      video.pause();
+      video.currentTime = 0;
+    });
+  });
 }
 
-// BUTTON SKIP
+// ENTER SITE
+
+function enterSite() {
+  if (siteEntered) return;
+
+  siteEntered = true;
+
+  intro.style.display = "none";
+  mainSite.style.display = "block";
+
+  requestAnimationFrame(() => {
+    mainSite.style.opacity = "1";
+  });
+}
+
+// EVENT LISTENERS
 
 enterBtn.addEventListener("click", enterSite);
 
-// HAMBURGER MENU
+introVideo.addEventListener("ended", enterSite);
 
 hamburgerBtn.addEventListener("click", openMenu);
 
-closeMenu.addEventListener("click", closeMobileMenu);
+closeMenuBtn.addEventListener("click", closeMenu);
 
-// AUTO ENTER WHEN VIDEO ENDS
+// INITIALIZE HYPERCAR VIDEOS
 
-introVideo.addEventListener("ended", enterSite);
-
-// FEATURED INVENTORY DATA
-
-/*const cars = [
- {
-    brand: "Lamborghini Aventador",
-    price: "$550,000",
-    image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70",
-  },
-
-  {
-    brand: "Ferrari SF90",
-    price: "$625,000",
-    image: "https://images.unsplash.com/photo-1494905998402-395d579af36f",
-  },
-
-  {
-    brand: "McLaren 720S",
-    price: "$410,000",
-    image: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b",
-  },
-];
-
-// CREATE INVENTORY CARDS
-
-const carContainer = document.querySelector(".car-container");
-
-cars.forEach((car) => {
-  const carCard = document.createElement("div");
-
-  carCard.classList.add("car-card");
-
-  carCard.innerHTML = `
-
-    <img src="${car.image}" alt="${car.brand}">
-
-    <div class="car-info">
-
-      <h3>${car.brand}</h3>
-
-      <p>${car.price}</p>
-
-      <button>View Details</button>
-
-    </div>
-
-  `;
-
-  carContainer.appendChild(carCard);
-});*/
+initializeHypercarVideos();
