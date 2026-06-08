@@ -28,9 +28,16 @@
     <!-- INTRO SCREEN -->
 
     <section class="intro">
-      <video autoplay muted playsinline preload="auto" class="intro-video">
-  <source src="assets/atlas-intro-final2.mp4" type="video/mp4" />
-</video>
+      <video
+        autoplay
+        muted
+        playsinline
+        preload="auto"
+        poster="assets/poster-image.png"
+        class="intro-video"
+      >
+        <source src="assets/atlas-intro-final.mp4" type="video/mp4" />
+      </video>
 
       <div class="intro-overlay"></div>
 
@@ -45,7 +52,7 @@
 
     <!-- MAIN SITE -->
 
-    <div class="main-site">
+    <main class="main-site" hidden>
       <!-- NAVBAR -->
 
       <nav>
@@ -95,16 +102,13 @@
           </p>
         </div>
 
-<section class="certified-cta">
-  <p class="eyebrow">Instructor Review Section</p>
+        <section class="certified-cta">
+          <p class="eyebrow">Instructor Review Section</p>
 
-  <h2>Explore Certified Pre-Owned Inventory</h2>
+          <h2>Explore Certified Pre-Owned Inventory</h2>
 
-  <a href="certified.html" class="certified-btn">
-    View Inventory
-  </a>
-</section>
-
+          <a href="certified.html" class="certified-btn"> View Inventory </a>
+        </section>
       </section>
 
       <!-- HYPERCAR COLLECTION -->
@@ -159,39 +163,42 @@
 
       <!-- SUPERCAR COLLECTION -->
 
-<section id="supercars" class="supercars">
-  <h2 class="section-title">Supercar <span>Collection</span></h2>
+      <section id="supercars" class="supercars">
+        <h2 class="section-title">Supercar <span>Collection</span></h2>
 
-  <div class="super-grid">
-    <!-- LAMBORGHINI -->
+        <div class="super-grid">
+          <!-- LAMBORGHINI -->
 
-    <a href="huracan.html" class="super-link">
-      <div class="super-card">
-        <img src="assets/huracan-front.jpg" alt="Lamborghini Huracan STO" />
+          <a href="huracan.html" class="super-link">
+            <div class="super-card">
+              <img
+                src="assets/huracan-front.jpg"
+                alt="Lamborghini Huracan STO"
+              />
 
-        <div class="super-overlay">
-          <h3>Lamborghini Huracán STO</h3>
+              <div class="super-overlay">
+                <h3>Lamborghini Huracán STO</h3>
 
-          <p>Pure Naturally Aspirated Fury</p>
-        </div>
-      </div>
-    </a>
+                <p>Pure Naturally Aspirated Fury</p>
+              </div>
+            </div>
+          </a>
 
-    <!-- AUDI -->
+          <!-- AUDI -->
 
-    <a href="r8.html" class="super-link">
-      <div class="super-card">
-        <img src="assets/audi-front.jpg" alt="Audi R8 Spyder" />
+          <a href="r8.html" class="super-link">
+            <div class="super-card">
+              <img src="assets/audi-front.jpg" alt="Audi R8 Spyder" />
 
-        <div class="super-overlay">
-          <h3>Audi R8 Spyder</h3>
+              <div class="super-overlay">
+                <h3>Audi R8 Spyder</h3>
 
-          <p>V10 power. Unmistakable presence.</p>
-        </div>
-      </div>
-    </a>
+                <p>V10 power. Unmistakable presence.</p>
+              </div>
+            </div>
+          </a>
 
-    <!--
+          <!--
     FUTURE EXPANSION:
     McLaren 720S temporarily removed to prioritize
     Certified Pre-Owned requirements for final project submission.
@@ -207,7 +214,7 @@
     </div>
     -->
 
-    <!--
+          <!--
     FUTURE EXPANSION:
     Porsche 911 GT3 RS temporarily removed to prioritize
     Certified Pre-Owned requirements for final project submission.
@@ -222,53 +229,50 @@
       </div>
     </div>
     -->
-    
-  </div>
-</section>
+        </div>
+      </section>
 
+      <div class="modal" id="contact-modal">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
 
-    <div class="modal" id="contact-modal">
-      <div class="modal-content">
-        <span class="close-modal">&times;</span>
+          <h2>ATLAS Motors Concierge</h2>
 
-        <h2>ATLAS Motors Concierge</h2>
+          <p>
+            For private acquisitions, vehicle sourcing, and luxury automotive
+            inquiries, contact our concierge team directly.
+          </p>
 
-        <p>
-          For private acquisitions, vehicle sourcing, and luxury automotive
-          inquiries, contact our concierge team directly.
-        </p>
+          <form>
+            <input type="text" placeholder="Full Name" required />
 
-        <form>
-          <input type="text" placeholder="Full Name" required />
+            <input type="email" placeholder="Email Address" required />
 
-          <input type="email" placeholder="Email Address" required />
+            <textarea placeholder="Your Inquiry" required></textarea>
 
-          <textarea placeholder="Your Inquiry" required></textarea>
+            <button type="submit">Submit Inquiry</button>
+          </form>
+          <div class="submission-status" id="submission-status">
+            <div class="spinner"></div>
 
-          <button type="submit">Submit Inquiry</button>
-        </form>
-        <div class="submission-status" id="submission-status">
-          <div class="spinner"></div>
+            <div class="success-message">
+              <h3>Inquiry Received</h3>
 
-          <div class="success-message">
-            <h3>Inquiry Received</h3>
-
-            <p>
-              Thank you for contacting ATLAS Motors. A member of our concierge
-              team will review your request and respond with the discretion and
-              attention your acquisition deserves.
-            </p>
+              <p>
+                Thank you for contacting ATLAS Motors. A member of our concierge
+                team will review your request and respond with the discretion
+                and attention your acquisition deserves.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-
+    </main>
     <!-- FOOTER -->
 
-   <footer class="site-footer">
-  <p>© 2026 ATLAS Motors</p>
-  <p>Luxury & Exotic Automotive Acquisition</p>
-</footer>
-
+    <footer class="site-footer">
+      <p>© 2026 ATLAS Motors</p>
+      <p>Luxury & Exotic Automotive Acquisition</p>
+    </footer>
   </body>
 </html>

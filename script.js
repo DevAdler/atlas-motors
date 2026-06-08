@@ -56,6 +56,8 @@ function enterSite() {
   siteEntered = true;
 
   intro.style.display = "none";
+
+  mainSite.hidden = false;
   mainSite.style.display = "block";
 
   requestAnimationFrame(() => {

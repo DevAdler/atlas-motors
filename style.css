@@ -14,18 +14,16 @@ html {
 
 .intro {
   position: relative;
-
   width: 100%;
-
   height: 100vh;
-
   overflow: hidden;
-
   display: flex;
-
   justify-content: center;
-
   align-items: center;
+  background-image: url("assets/poster-image.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .intro-video {
@@ -161,6 +159,11 @@ body {
   opacity: 0;
 
   transition: opacity 1.5s ease;
+}
+
+/* Utility class to hide elements without affecting layout */
+[hidden] {
+  display: none !important;
 }
 
 /* NAVBAR */
