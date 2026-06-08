@@ -1,13 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certified Pre-Owned</title>
-    <link rel="stylesheet" href="certified.css">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ATLAS Motors | Certified Pre-Owned</title>
+
+    <link rel="stylesheet" href="certified.css" />
+
     <script src="certified.js" defer></script>
-</head>
-<body>
-    
-</body>
+  </head>
+
+  <body>
+    <a href="index.html" class="back-home">← Back to ATLAS Motors</a>
+
+    <header class="certified-hero">
+      <div class="hero-content">
+        <p class="eyebrow">ATLAS Certified</p>
+
+        <h1>Certified Pre-Owned Collection</h1>
+
+        <p>
+          Explore a curated selection of luxury and exotic vehicles inspected
+          for quality, performance, and distinction.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section class="inventory-section">
+        <div class="inventory-header">
+          <div>
+            <p class="eyebrow">Available Inventory</p>
+
+            <h2>Pre-Owned Vehicles</h2>
+          </div>
+
+          <label for="sort-cars">
+            Sort Vehicles
+            <select id="sort-cars">
+              <option value="featured">Featured</option>
+              <option value="az">Alphabetical A to Z</option>
+              <option value="za">Alphabetical Z to A</option>
+              <option value="low-high">Price Low to High</option>
+              <option value="high-low">Price High to Low</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="inventory-grid" id="inventory-grid">
+          <!-- Vehicle cards will go here -->
+        </div>
+      </section>
+
+      <section class="vehicle-data-lookup">
+        <div class="lookup-content">
+          <p class="eyebrow">Public Vehicle API</p>
+
+          <h2>Vehicle Model Lookup</h2>
+
+          <p>
+            Search a manufacturer to view real vehicle model data from a public
+            API.
+          </p>
+
+          <form id="lookup-form">
+            <input
+              type="text"
+              id="make-input"
+              placeholder="Search Audi, Porsche, BMW..."
+              required
+            />
+
+            <button type="submit">Search Models</button>
+          </form>
+
+          <div id="lookup-results" class="lookup-results"></div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <p>© 2026 ATLAS Motors</p>
+      <p>Luxury & Exotic Automotive Acquisition</p>
+    </footer>
+  </body>
 </html>

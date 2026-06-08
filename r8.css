@@ -567,3 +567,16 @@ body {
 
   margin: 0;
 }
+
+/* FOOTER STYLES */
+
+.site-footer {
+  padding: 2rem;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.site-footer p {
+  color: #888;
+  font-size: 0.9rem;
+}

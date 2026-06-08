@@ -56,7 +56,7 @@
         <div class="nav-links">
           <a href="#hypercars">Hypercars</a>
           <a href="#supercars">Supercars</a>
-          <a href="#contact">Contact</a>
+          <a href="#contact" class="modal-btn">Contact</a>
         </div>
 
         <button class="hamburger-btn" aria-label="Open Navigation Menu">
@@ -77,7 +77,7 @@
           <img src="assets/atlas-nav-lambo.png" alt="Lamborghini Supercars" />
         </a>
 
-        <a href="#contact" class="menu-card menu-contact">
+        <a href="#contact" class="menu-card modal-btn">
           <h2>CONTACT</h2>
           <img src="assets/atlas-nav-contact.png" alt="ATLAS Motors Contact" />
         </a>
@@ -93,9 +93,18 @@
             Explore the world's most exclusive exotic vehicles. From Lamborghini
             to Bugatti, experience automotive perfection.
           </p>
-
-        
         </div>
+
+<section class="certified-cta">
+  <p class="eyebrow">Instructor Review Section</p>
+
+  <h2>Explore Certified Pre-Owned Inventory</h2>
+
+  <a href="certified.html" class="certified-btn">
+    View Inventory
+  </a>
+</section>
+
       </section>
 
       <!-- HYPERCAR COLLECTION -->
@@ -150,66 +159,116 @@
 
       <!-- SUPERCAR COLLECTION -->
 
-      <section id="supercars" class="supercars">
-        <h2 class="section-title">Supercar <span>Collection</span></h2>
+<section id="supercars" class="supercars">
+  <h2 class="section-title">Supercar <span>Collection</span></h2>
 
-        <div class="super-grid">
-          <!-- LAMBORGHINI -->
+  <div class="super-grid">
+    <!-- LAMBORGHINI -->
 
-          <a href="huracan.html" class="super-link">
-            <div class="super-card">
-              <img
-                src="assets/huracan-front.jpg"
-                alt="Lamborghini Huracan STO"
-              />
+    <a href="huracan.html" class="super-link">
+      <div class="super-card">
+        <img src="assets/huracan-front.jpg" alt="Lamborghini Huracan STO" />
 
-              <div class="super-overlay">
-                <h3>Lamborghini Huracán STO</h3>
+        <div class="super-overlay">
+          <h3>Lamborghini Huracán STO</h3>
 
-                <p>Pure Naturally Aspirated Fury</p>
-              </div>
-            </div>
-          </a>
+          <p>Pure Naturally Aspirated Fury</p>
+        </div>
+      </div>
+    </a>
 
-          <!-- Audi -->
+    <!-- AUDI -->
 
-          <a href="r8.html" class="super-link">
-            <div class="super-card">
-              <img src="assets/audi-front.jpg" alt="Audi R8 Spyder" />
+    <a href="r8.html" class="super-link">
+      <div class="super-card">
+        <img src="assets/audi-front.jpg" alt="Audi R8 Spyder" />
 
-              <div class="super-overlay">
-                <h3>Audi R8 Spyder</h3>
+        <div class="super-overlay">
+          <h3>Audi R8 Spyder</h3>
 
-                <p>V10 power. Unmistakable presence.</p>
-              </div>
-            </div>
-          </a>
+          <p>V10 power. Unmistakable presence.</p>
+        </div>
+      </div>
+    </a>
 
-          <!-- MCLAREN -->
+    <!--
+    FUTURE EXPANSION:
+    McLaren 720S temporarily removed to prioritize
+    Certified Pre-Owned requirements for final project submission.
 
-          <div class="super-card">
-            <img src="assets/mclaren-front.jpg" alt="McLaren 720S" />
+    <div class="super-card">
+      <img src="assets/mclaren-front.jpg" alt="McLaren 720S" />
 
-            <div class="super-overlay">
-              <h3>McLaren 720S</h3>
+      <div class="super-overlay">
+        <h3>McLaren 720S</h3>
 
-              <p>Born from the racetrack.</p>
-            </div>
-          </div>
+        <p>Born from the racetrack.</p>
+      </div>
+    </div>
+    -->
 
-          <!-- PORSCHE -->
+    <!--
+    FUTURE EXPANSION:
+    Porsche 911 GT3 RS temporarily removed to prioritize
+    Certified Pre-Owned requirements for final project submission.
 
-          <div class="super-card">
-            <img src="assets/gt3rs.jpg" alt="Porsche GT3 RS" />
+    <div class="super-card">
+      <img src="assets/gt3rs.jpg" alt="Porsche GT3 RS" />
 
-            <div class="super-overlay">
-              <h3>Porsche 911 GT3 RS</h3>
+      <div class="super-overlay">
+        <h3>Porsche 911 GT3 RS</h3>
 
-              <p>Precision Engineered Performance</p>
-            </div>
+        <p>Precision Engineered Performance</p>
+      </div>
+    </div>
+    -->
+    
+  </div>
+</section>
+
+
+    <div class="modal" id="contact-modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+
+        <h2>ATLAS Motors Concierge</h2>
+
+        <p>
+          For private acquisitions, vehicle sourcing, and luxury automotive
+          inquiries, contact our concierge team directly.
+        </p>
+
+        <form>
+          <input type="text" placeholder="Full Name" required />
+
+          <input type="email" placeholder="Email Address" required />
+
+          <textarea placeholder="Your Inquiry" required></textarea>
+
+          <button type="submit">Submit Inquiry</button>
+        </form>
+        <div class="submission-status" id="submission-status">
+          <div class="spinner"></div>
+
+          <div class="success-message">
+            <h3>Inquiry Received</h3>
+
+            <p>
+              Thank you for contacting ATLAS Motors. A member of our concierge
+              team will review your request and respond with the discretion and
+              attention your acquisition deserves.
+            </p>
           </div>
         </div>
-      </section>
+      </div>
     </div>
+
+    <!-- FOOTER -->
+
+   <footer class="site-footer">
+  <p>© 2026 ATLAS Motors</p>
+  <p>Luxury & Exotic Automotive Acquisition</p>
+</footer>
+
   </body>
 </html>

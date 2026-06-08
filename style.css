@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* INTRO SCREEN */
 
 .intro {
@@ -337,6 +341,10 @@ nav {
 
   align-items: center;
 
+  justify-content: space-between;
+
+  gap: 4rem;
+
   padding: 0 8%;
 }
 
@@ -374,6 +382,77 @@ nav {
   max-width: 550px;
 }
 
+.certified-cta {
+  max-width: 520px;
+
+  text-align: center;
+
+  padding: 0;
+}
+
+.certified-btn {
+  position: relative;
+
+  display: inline-block;
+
+  margin-top: 2rem;
+
+  padding: 18px 45px;
+
+  border: 2px solid #c9a227;
+
+  border-radius: 12px;
+
+  color: #c9a227;
+
+  text-decoration: none;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  overflow: hidden;
+
+  transition: 0.4s ease;
+}
+
+.certified-btn:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 0 12px rgba(201, 162, 39, 0.4),
+    0 0 25px rgba(201, 162, 39, 0.25);
+
+  background: rgba(201, 162, 39, 0.08);
+}
+
+.certified-btn::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: -100%;
+
+  width: 100%;
+
+  height: 100%;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
+
+  transition: 0.6s ease;
+}
+
+.certified-btn:hover::before {
+  left: 100%;
+}
+
 /* VEHICLE CARD COMPONENTS */
 
 .section-title {
@@ -390,8 +469,10 @@ nav {
 
 /* HYPERCAR SECTION */
 
+
+
 .hypercars {
-  padding: 120px 8%;
+  padding: 20px 8%;
 }
 
 .hyper-card {
@@ -472,6 +553,8 @@ nav {
 
 .supercars {
   padding: 120px 8%;
+
+  scroll-margin-top: 60px;
 }
 
 .super-grid {
@@ -568,6 +651,298 @@ nav {
   transform: scale(1.08);
 }
 
+/* MODAL */
+
+.modal {
+
+position: fixed;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 100vh;
+
+  max-height: 100%;
+
+  overflow: auto;
+
+  background: rgba(0, 0, 0, 0.82);
+
+  backdrop-filter: blur(10px);
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transition: 0.4s ease;
+
+  z-index: 9999;
+}
+
+.modal.active {
+  opacity: 1;
+
+  visibility: visible;
+}
+
+.modal-content {
+  width: 90%;
+
+  overflow: auto;
+
+  max-height: 80vh;
+
+  max-width: 600px;
+
+  background: #0d0d0d;
+
+  border: 1px solid rgba(201, 162, 39, 0.25);
+
+  border-radius: 24px;
+
+  padding: 50px;
+
+  position: relative;
+
+  text-align: center;
+
+  box-shadow:
+    0 0 30px rgba(0, 0, 0, 0.5),
+    0 0 60px rgba(201, 162, 39, 0.08);
+}
+
+.modal-content h2 {
+  font-size: 2.5rem;
+
+  margin-bottom: 20px;
+}
+
+.modal-content p {
+  color: #cfcfcf;
+
+  line-height: 1.8;
+
+  margin-bottom: 35px;
+}
+
+.modal-content form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.modal-content input,
+.modal-content textarea {
+  background: #141414;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  padding: 18px;
+
+  border-radius: 12px;
+
+  color: white;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 1rem;
+}
+
+.modal-content textarea {
+  min-height: 140px;
+
+  resize: none;
+}
+
+.modal-content button {
+  position: relative;
+
+  padding: 18px;
+
+  border: 2px solid #c9a227;
+
+  background: transparent;
+
+  color: #c9a227;
+
+  font-size: 1rem;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  transition: 0.4s ease;
+}
+
+.modal-content button:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 0 12px rgba(201, 162, 39, 0.4),
+    0 0 25px rgba(201, 162, 39, 0.25);
+
+  background: rgba(201, 162, 39, 0.08);
+}
+
+.modal-content button::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: -100%;
+
+  width: 100%;
+
+  height: 100%;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
+
+  transition: 0.6s ease;
+}
+
+.modal-content button:hover::before {
+  left: 100%;
+}
+
+.close-modal {
+  position: absolute;
+
+  top: 20px;
+
+  right: 25px;
+
+  font-size: 2rem;
+
+  cursor: pointer;
+
+  color: #c9a227;
+
+  transition: 0.3s ease;
+}
+
+.close-modal:hover {
+  color: white;
+
+  transform: rotate(90deg) scale(1.15);
+
+  text-shadow:
+    0 0 10px rgba(201, 162, 39, 0.7),
+    0 0 20px rgba(201, 162, 39, 0.4);
+}
+
+/* SUBMISSION STATUS */
+
+.submission-status {
+  display: none;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-top: 30px;
+
+  text-align: center;
+}
+
+/* LOADING SPINNER */
+
+.spinner {
+  width: 70px;
+
+  height: 70px;
+
+  border: 4px solid rgba(255, 255, 255, 0.15);
+
+  border-top: 4px solid #c9a227;
+
+  border-radius: 50%;
+
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* SUCCESS MESSAGE */
+
+.success-message {
+  display: none;
+
+  margin-top: 25px;
+
+  padding: 25px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(22, 120, 55, 0.95),
+    rgba(34, 160, 85, 0.95)
+  );
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 0 20px rgba(34, 160, 85, 0.3),
+    0 0 40px rgba(34, 160, 85, 0.15);
+}
+
+.success-message h3 {
+  font-size: 1.6rem;
+
+  margin-bottom: 12px;
+
+  color: white;
+}
+
+.success-message p {
+  color: rgba(255, 255, 255, 0.9);
+
+  line-height: 1.8;
+
+  margin: 0;
+}
+
+/* FOOTER STYLES */
+
+.site-footer {
+  padding: 2rem;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.site-footer p {
+  color: #888;
+  font-size: 0.9rem;
+}
+
 /* TABLET & MOBILE RESPONSIVENESS */
 
 @media (max-width: 992px) {
@@ -578,6 +953,30 @@ nav {
 
   .super-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .certified-cta {
+    padding: 2rem 1rem;
+  }
+
+  .certified-cta h2 {
+    font-size: 1.8rem;
+  }
+
+  .certified-btn {
+    padding: 14px 28px;
+    font-size: 0.85rem;
   }
 }
 
@@ -592,7 +991,24 @@ nav {
 }
 
 @media (max-width: 480px) {
+  .hero {
+    padding: 7rem 1.5rem 3rem;
+  }
+
   .hero-content h1 {
-    font-size: 3rem;
+    font-size: 2.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .certified-cta h2 {
+    font-size: 1.4rem;
+  }
+
+  .certified-btn {
+    width: 100%;
+    max-width: 320px;
   }
 }
